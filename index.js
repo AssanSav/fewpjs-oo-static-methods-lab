@@ -16,9 +16,9 @@ class Formatter {
         result.push(splitString[i])
       }
       else {
-        result.push(splitString[i].charAt().toUpperCase() + splitString[i].slice(1))
+        result.push(this.capitalize(splitString[i]))
       }
     }
-    return result.join(" ").charAt(0).toLocaleUpperCase() + result.join(" ").slice(1)
+    return this.capitalize(result.join(" "))
   }
 }
